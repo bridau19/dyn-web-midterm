@@ -42,9 +42,6 @@ function Home() {
         }
     }, [LAUNCH_URL, launchData]);
 
-    // dev console logs - delete later
-    // console.log(launchData["results"]);
-
     return (
         <main>
             <h1>ISS Current Location</h1>
