@@ -4,3 +4,11 @@
     padding: 0;
 }
 
+.ApodCardWrapper{
+    align-items: flex-start;
+    /* border: 2px solid black; */
+    box-shadow: 5px 10px #888888;
+    display: flex;
+    margin-bottom: 50px;
+    padding: 25px;
+  }
