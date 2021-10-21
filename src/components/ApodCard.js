@@ -8,14 +8,15 @@ function ApodCard({apod}) {
     // console.log("dateString: ", dateString);
 
     return (
-        <div className="ApodCardWrapper">          
-            <div className="ApodCardImage">
-                < img src={apod.url} alt={apod.title} />
-            </div>
-            <div className="LaunchCardText">
-                <h2 className="ApodCardTitle">Astronomy Picture of the Day</h2>
-                <p className="ApodCardSubtext">Copyright: {apod.copyright}, date: {dateString}</p>
-                <p className="ApodCardSubtext">{apod.explanation}</p> 
+        <div className="ApodCardWrapper"> 
+            <h2 className="ApodCardTitle">Astronomy Picture of the Day</h2>
+
+            <div className="ApodCardBody">         
+                <div className="ApodCardImage">
+                    < img src={apod.url} alt={apod.title} />
+                </div>
+                    <p className="ApodCardSubtext">Copyright: {apod.copyright}, date: {dateString}</p>
+                    <p className="ApodCardSubtext">{apod.explanation}</p> 
             </div>
         </div>
     );

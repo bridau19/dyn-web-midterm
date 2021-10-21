@@ -32,18 +32,18 @@ function Home() {
     const lat = position[0];
     const lon = position[1];
 
-    useEffect(() => { // get launch info
-        if (!launchData) {
-            axios
-            .get(LAUNCH_URL)
-            .then(response => {
-                setLaunchData(response.data);
-            })
-            .catch(function(error) {
-                console.warn(error);
-            });
-        }
-    }, [LAUNCH_URL, launchData]);
+    // useEffect(() => { // get launch info
+    //     if (!launchData) {
+    //         axios
+    //         .get(LAUNCH_URL)
+    //         .then(response => {
+    //             setLaunchData(response.data);
+    //         })
+    //         .catch(function(error) {
+    //             console.warn(error);
+    //         });
+    //     }
+    // }, [LAUNCH_URL, launchData]);
 
     useEffect(() => { // get launch info
         if (!apod) {
@@ -62,7 +62,7 @@ function Home() {
 
     return (
         <main>
-            <h1>Spaced Out</h1>
+            <h1>SpacedOut</h1>
 
             <h2>ISS Current Location</h2>
             <p>{lat}, {lon}</p>
