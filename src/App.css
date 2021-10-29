@@ -59,10 +59,12 @@ h2 {
     padding: 25px;
 }
 
-.ISS img {
-    width: 60vw;
-    height: 400px;
-    background-size: cover;
+.ISS_img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    background-position: bottom;
+    overflow: hidden;
 }
 
 .ISS p {
@@ -103,11 +105,11 @@ h2 {
     padding: 5px;
 }
 
+.LaunchCardText p {
+    margin-bottom: 15px;
+}
+
 .LaunchCardBody {
     display: flex;
     flex-direction: row;
-}
-
-.mainCard {
-    display: flex;
 }

@@ -32,18 +32,18 @@ function Home() {
     const lat = position[0];
     const lon = position[1];
 
-    // useEffect(() => { // get launch info
-    //     if (!launchData) {
-    //         axios
-    //         .get(LAUNCH_URL)
-    //         .then(response => {
-    //             setLaunchData(response.data);
-    //         })
-    //         .catch(function(error) {
-    //             console.warn(error);
-    //         });
-    //     }
-    // }, [LAUNCH_URL, launchData]);
+    useEffect(() => { // get launch info
+        if (!launchData) {
+            axios
+            .get(LAUNCH_URL)
+            .then(response => {
+                setLaunchData(response.data);
+            })
+            .catch(function(error) {
+                console.warn(error);
+            });
+        }
+    }, [LAUNCH_URL, launchData]);
 
     useEffect(() => { // get apod
         if (!apod) {
@@ -67,7 +67,9 @@ function Home() {
             <div className="ISS">
                 <h2>ISS Current Location</h2>
                 <p>{lat}, {lon}</p>
-                <img src="src/iss_img.jpg" alt="image of International Space Station" />
+                <div className="ISS_img">
+                    <img src="/images/iss_img.jpg" alt="image of International Space Station" />
+                </div>
             </div>
             
             <div className="Launches" > 
