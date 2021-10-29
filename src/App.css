@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Comfortaa', cursive;
 }
 
 .ApodCardBody {
@@ -11,21 +12,102 @@
 
 .ApodCardWrapper{
     align-items: flex-start;
-    /* border: 2px solid black; */
-    box-shadow: 5px 10px #888888;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 6px 8px #999;
     display: flex;
     flex-direction: column;
-    font-family: 'Comfortaa', cursive;
-    margin-bottom: 50px;
+    margin: 50px;
     padding: 25px;
   }
 
 .ApodCardImage img {
-    width: 45vw;
+    width: 35vw;
 }
 
-  h1 {
-    font-family: 'Comfortaa', cursive;
+.ApodCardSubtext {
+    margin-top: 1vh;
+}
+
+.ApodCardText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6em;
+  margin: 0 2vh;
+  padding: 5px;
+}
+
+h1 {
     font-size: 8vw;
     text-align: center;
+    margin-top: 3vw;
+}
+
+h2 {
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+
+.ISS {
+    align-items: flex-start;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 6px 8px #999;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 25px;
+}
+
+.ISS img {
+    width: 60vw;
+    height: 400px;
+    background-size: cover;
+}
+
+.ISS p {
+    font-size: 4em;
+    margin: 20px;
+}
+
+.Launches {
+    align-items: flex-start;
+    border: 2px solid black;
+    box-shadow: 6px 8px #999;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 25px;
+}
+
+.LaunchCardWrapper {
+    align-items: flex-start;
+    border: 2px solid black;
+    box-shadow: 3px 4px #999;
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    padding: 12px;
+}
+
+.LaunchCardImage img {
+    width: 40vw;
+    height: 300px;
+    background-size: cover;
+}
+
+.LaunchCardText {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+    padding: 5px;
+}
+
+.LaunchCardBody {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainCard {
+    display: flex;
 }

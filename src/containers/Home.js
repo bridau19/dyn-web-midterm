@@ -45,7 +45,7 @@ function Home() {
     //     }
     // }, [LAUNCH_URL, launchData]);
 
-    useEffect(() => { // get launch info
+    useEffect(() => { // get apod
         if (!apod) {
             axios
             .get(APOD_TEST)
@@ -58,20 +58,25 @@ function Home() {
         }
     }, [APOD_TEST, apod]);
 
-    console.log(apod);
-
     return (
         <main>
             <h1>SpacedOut</h1>
 
-            <h2>ISS Current Location</h2>
-            <p>{lat}, {lon}</p>
-
+           
             {apod && <ApodCard apod={apod} />}
+
+            <div className="ISS">
+                <h2>ISS Current Location</h2>
+                <p>{lat}, {lon}</p>
+                <img src="src/iss_img.jpg" alt="image of International Space Station" />
+            </div>
             
-            {launchData && launchData['results'].map((launch, i) => (
-                <LaunchCard launch={launch} key={i}/>
-            ))}
+            <div className="Launches" > 
+                <h2>Upcoming Launches</h2>
+                {launchData && launchData['results'].map((launch, i) => (
+                    <LaunchCard launch={launch} key={i}/>
+                ))}
+            </div>
         </main>
     );
 }

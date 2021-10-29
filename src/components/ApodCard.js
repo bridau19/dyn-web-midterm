@@ -15,8 +15,11 @@ function ApodCard({apod}) {
                 <div className="ApodCardImage">
                     < img src={apod.url} alt={apod.title} />
                 </div>
-                    <p className="ApodCardSubtext">Copyright: {apod.copyright}, date: {dateString}</p>
-                    <p className="ApodCardSubtext">{apod.explanation}</p> 
+                <div className="ApodCardText">
+                    <p className="ApodCardSubtext">Copyright: {apod.copyright}</p>
+                    <p className="ApodCardSubtext"> {dateString} </p>
+                    <p className="ApodCardSubtext"> Description: {apod.explanation}</p>
+                </div>
             </div>
         </div>
     );
