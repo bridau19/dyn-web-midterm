@@ -62,7 +62,6 @@ function Home() {
         <main>
             <h1>SpacedOut</h1>
 
-           
             {apod && <ApodCard apod={apod} />}
 
             <div className="ISS">

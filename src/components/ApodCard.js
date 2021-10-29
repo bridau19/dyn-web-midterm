@@ -1,11 +1,8 @@
 import React from "react";
 
 function ApodCard({apod}) {
-    const newDate = new Date(apod.date); 
-    // console.log("from api: ", apod.date);
-    // console.log("object Date: ", newDate);
+    const newDate = new Date(apod.date);
     const dateString = newDate.toString();
-    // console.log("dateString: ", dateString);
 
     return (
         <div className="ApodCardWrapper"> 
