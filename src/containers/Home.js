@@ -23,7 +23,7 @@ function Home() {
         setService(serviceValue);
     }, [query]);
 
-    useEffect(() => { // get ISS positions
+    useEffect(() => { // get ISS positions  
         if (position) {
             axios
             .get(ISS_URL)
@@ -54,6 +54,19 @@ function Home() {
         }
     }, [LAUNCH_URL, launchData]);
 
+    useEffect(() => { // get launch info for service
+        if (service) {
+            axios
+            .get(LAUNCH_URL)
+            .then(response => {
+                setLaunchData(response.data);
+            })
+            .catch(function(error) {
+                console.warn(error);
+            });
+        }
+    }, [LAUNCH_URL, service]);
+
     useEffect(() => { // get apod
         if (!apod) {
             axios
@@ -67,6 +80,7 @@ function Home() {
         }
     }, [APOD_TEST, apod]);
 
+    console.log(launchData);
     return (
         <main>
             <header>
@@ -85,11 +99,11 @@ function Home() {
                     <img src="/images/iss_img.jpg" alt="Image of International Space Station"/>
                 </div>
             </div>
-            
+
             <div className="Launches"> 
                 <h2>Upcoming Launches</h2>
                 <nav className="launchNav">
-                    <a href=''>All</a>
+                    <a href='/?service=all'>All</a>
                     <a href='/?service=SpaceX'>SpaceX</a>
                     <a href='/?service=Arianespace'>Arianespace</a>
                 </nav>
