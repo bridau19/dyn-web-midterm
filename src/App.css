@@ -114,13 +114,16 @@ h2 {
     flex-direction: row;
 }
 
-.Navigation {
+.launchNav {
     color: black;
     display: flex;
-    justify-content: space-around;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
-.Navigation a:visited {
+.launchNav a {
+    padding-right: 20px;
+}
+
+.launchNav a:visited {
 color: black;
 }

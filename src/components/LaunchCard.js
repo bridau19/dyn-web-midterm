@@ -5,7 +5,7 @@ function LaunchCard({launch}) {
     const dateString = newDate.toString();
     return (
         <div className="LaunchCardWrapper">
-            <h2 className="LaunchCardTitle">{launch.mission.name}</h2>
+            <h2 className="LaunchCardTitle">{launch.name}</h2>
             <div className="LaunchCardBody"> 
                 <div className="LaunchCardImage">
                     {launch.image && <img src={launch.image} alt="launch" />}
