@@ -14,3 +14,4 @@ A website to view space related info
 Add a map to show ISS location
 [Google Maps Platform](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript)
 
+Add ability to switch between viewing past and upcoming launches

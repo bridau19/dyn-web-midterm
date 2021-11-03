@@ -60,24 +60,33 @@ function Home() {
 
     return (
         <main>
-            <h1>SpacedOut</h1>
+            <header id="top">
+                <h1>SpacedOut</h1>
+                <nav className="Navigation">
+                    <a href="#apod-id">Astronomy Picture of the Day</a>
+                    <a href="#iss-id">ISS Location</a>
+                    <a href="#launches-id">Upcoming Launches</a>
+                </nav>
+            </header>
 
-            {apod && <ApodCard apod={apod} />}
+            <div id="apod-id">
+                {apod && <ApodCard apod={apod} />}
+            </div>
 
-            <div className="ISS">
+            <div className="ISS" id="iss-id">
                 <h2>ISS Current Location</h2>
                 <p>{lat}, {lon}</p>
-                <div className="ISS_img">
-                    <img src="/images/iss_img.jpg" alt="image of International Space Station" />
-                </div>
+                <div className="ISS_img"></div>
             </div>
             
-            <div className="Launches" > 
+            <div className="Launches" id="launches-id"> 
                 <h2>Upcoming Launches</h2>
                 {launchData && launchData['results'].map((launch, i) => (
                     <LaunchCard launch={launch} key={i}/>
                 ))}
             </div>
+
+            <a href="#top" className="Navigation">Back to top</a>
         </main>
     );
 }
