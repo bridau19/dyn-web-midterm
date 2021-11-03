@@ -75,7 +75,10 @@ function Home() {
 
             {apod && <ApodCard apod={apod} />}
 
-            <div className="ISS">
+            <div className="ISS" style={{
+                backgroundColor: `rgba(${lat}, ${lon}, 255, 0.2)`,
+            }}>
+                
                 <h2>ISS Current Location</h2>
                 <p>{lat}, {lon}</p>
                 <div className="ISS_img">
